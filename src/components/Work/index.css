@@ -1,0 +1,13 @@
+.section-work a,
+.section-work a:visited,
+.section-work a:active {
+    color: black;
+}
+
+.section-work hr {
+    width: 30%;
+}
+
+.section-work {
+    text-align: center;
+}

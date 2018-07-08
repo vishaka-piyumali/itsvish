@@ -1,0 +1,26 @@
+header {
+	background: #404244;
+	padding: 30px;
+	color: #fff;
+	border-bottom: 5px solid gold;
+}
+
+header li a {
+	border-right: 1px solid white;
+
+}
+
+header li:last-child  a{
+	border-right: none;
+
+}
+header a {
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: 'primary-header-family';
+}
+
+header a.selected {
+	color: gold;
+}
