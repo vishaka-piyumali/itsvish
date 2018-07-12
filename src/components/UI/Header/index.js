@@ -20,6 +20,9 @@ class Main extends Component {
 								<NavLink exact to="/" activeClassName="selected" >Home</NavLink>
 							</li>
 							<li>
+								<NavLink to="/showcase" activeClassName="selected" >Showcase</NavLink>
+							</li>
+							<li>
 								<NavLink to="/work" activeClassName="selected" >Work</NavLink>
 							</li>
 							<li>

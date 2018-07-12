@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-import './App.css';
+import './normalize.css';
 import '../styles/foundation.6.4.css';
+
+import './App.css';
 
 import UIHeader from '../components/UI/Header';
 import UIMain from '../components/UI/Main';

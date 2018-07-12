@@ -1,7 +1,7 @@
 .section-work a,
 .section-work a:visited,
 .section-work a:active {
-    color: black;
+    color: #777;
 }
 
 .section-work hr {

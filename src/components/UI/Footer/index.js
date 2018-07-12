@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Icon from '../Icon';
-import { ICONS } from '../../../helpers/Constants';
+import { ICONS } from '../../../utils/Constants';
 
 import './index.css';
 

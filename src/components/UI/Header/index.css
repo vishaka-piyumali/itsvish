@@ -5,14 +5,16 @@ header {
 	border-bottom: 5px solid gold;
 }
 
-header li a {
-	border-right: 1px solid white;
-
+header li::after {
+	content: '|';
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+	margin-top: 8px;
 }
 
-header li:last-child  a{
-	border-right: none;
-
+header li:last-child::after {
+	content: none;
 }
 header a {
 	color: #fff;
@@ -21,6 +23,9 @@ header a {
 	font-family: 'primary-header-family';
 }
 
+header a:hover {
+	color: gold;
+}
 header a.selected {
 	color: gold;
 }

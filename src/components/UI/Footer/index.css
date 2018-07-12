@@ -1,7 +1,10 @@
 footer {
     padding: 20px;
-    background: black;
+    background: #404244;
     color: white;
+    position: sticky;
+    bottom: 0;
+    width: 100vw;
 }
 footer ul::after {
     clear: both;
@@ -19,6 +22,6 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-     color: gold;
-     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px $accent-color, 0 0 30px $accent-color, 0 0 40px $accent-color, 0 0 50px $accent-color, 0 0 75px $accent-color;
- }
+    color: black;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px gold, 0 0 30px gold, 0 0 40px gold, 0 0 50px gold, 0 0 75px gold;
+}

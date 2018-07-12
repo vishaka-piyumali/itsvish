@@ -1,0 +1,42 @@
+.skill-categories {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.skill-categories .category {
+	border: 1px solid #ccc;
+	background: white;
+	display: block;
+	position: relative;
+	text-align: left;
+	vertical-align: bottom;
+	margin: 10px 0;
+	transition: background-color 0.5s ease;
+}
+
+.skill-categories .category:hover {
+	background: gold;
+}
+
+.skill-categories .category .title {
+	display: block;
+	height: max-content;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.skill-categories .category .skillset {
+	padding: 5px;
+
+}
+.skill-categories .category .skillset .skill {
+	opacity: 0.5;
+	padding: 5px;
+	margin-left: 0;
+	border-right: 1px solid #ccc;
+}
+.skill-categories .category .skillset .skill:last-child {
+	border: none;
+}
