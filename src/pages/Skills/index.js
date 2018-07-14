@@ -29,10 +29,10 @@ class Skills extends Component {
 		return (
 			<div>
 				<Row className="section-skills">
-					<Column className="hide-for-small-only" medium={6}>
+					<Column className="show-for-large-only" medium={6}>
 						<img src={skillsBanner} alt="skills" />
 					</Column>
-					<Column medium={6}>
+					<Column mediumn={12} large={6}>
 						<ul class="skill-categories">
 							{skills.map((category) => {
 								return (

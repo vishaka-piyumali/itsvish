@@ -10,5 +10,11 @@
 
 .section-work {
     text-align: center;
-    margin-top: 70px;
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+    .section-work {
+        margin-top: 70px;
+    }
 }

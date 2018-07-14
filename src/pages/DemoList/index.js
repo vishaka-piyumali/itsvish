@@ -25,7 +25,6 @@ class DemoList extends Component {
 
 		return (
 			<div>
-				<h1>Showcase</h1>
 				{demoList.map((demo) => {
 					return (
 						<section className="demo-item">

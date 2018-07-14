@@ -13,14 +13,14 @@ class Work extends Component {
 			'linkDesc': 'click here to open in a new window'
 		}, {
 			'title': 'Personal Projects',
-			'description': 'This online portfolio hand-crafted myself using ReactJs framework. If you are keen to look at the code behind, click here to check it out in the github along many other projects.',
-			'link': '//github.com/vishaka-piyumali/portfolio',
+			'description': 'Please checkout my Github account to see the source code for the personal projects available in the showcase',
+			'link': '//github.com/vishaka-piyumali/',
 			'linkDesc': 'click here to open in a new window'
 		}];
 		return (
 			<Row className="section-work">
 				{myWork.map((work) => {
-					return <Column large={6}>
+					return <Column medium={6}>
 						<a href={work.link} rel="noopener noreferrer" alt="" target="_blank">
 							<h2>{work.title}</h2>
 							<hr />

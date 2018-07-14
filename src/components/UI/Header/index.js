@@ -11,12 +11,12 @@ class Main extends Component {
 		return (
 			<header>
 				<Row>
-					<Column className="hide-for-small-only" small={2}>
+					<Column small={2}>
 						<NavLink exact to="/" activeClassName="selected" >
-							<img src={logo} width="100px" alt="Vishaka Wele Uhulangage - Sydney based web developer" />
+							<img className="logo" src={logo} width="100px" alt="Vishaka Wele Uhulangage - Sydney based web developer" />
 						</NavLink>
 					</Column>
-					<Column small={12} medium={10}>
+					<Column small={10}>
 						<ul className="menu align-right">
 							<li>
 								<NavLink exact to="/" activeClassName="selected" >Home</NavLink>
