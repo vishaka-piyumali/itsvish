@@ -28,12 +28,11 @@ class Skills extends Component {
 			}];
 		return (
 			<div>
-				<h1>Skills</h1>
 				<Row className="section-skills">
-					<Column large={6}>
+					<Column className="hide-for-small-only" medium={6}>
 						<img src={skillsBanner} alt="skills" />
 					</Column>
-					<Column large={6}>
+					<Column medium={6}>
 						<ul class="skill-categories">
 							{skills.map((category) => {
 								return (

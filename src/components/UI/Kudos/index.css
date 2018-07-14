@@ -1,0 +1,21 @@
+.kudos {
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+.kudos div {
+    font-family: 'primary-header-family';
+    font-weight: bold;
+    color: #777;
+}
+.kudos a {
+    display: block;
+}
+.kudos .icon {
+    color: #777;
+}
+.kudos .icon:hover {
+     color: gold;
+}
+.kudos .icon.liked {
+     color: lightgrey;
+}

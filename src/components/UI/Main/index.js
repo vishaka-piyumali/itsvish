@@ -5,7 +5,6 @@ import Home from '../../../pages/Home';
 import DemoList from '../../../pages/DemoList';
 import Work from '../../../pages/Work';
 import Skills from '../../../pages/Skills';
-import Contact from '../../../pages/Contact';
 import Demo from '../../../pages/Demo';
 
 
@@ -21,7 +20,6 @@ class Main extends Component {
 					<Route exact path='/demos' component={DemoList}/>
 					<Route exact path='/work' component={Work}/>
 					<Route exact path='/skills' component={Skills}/>
-					<Route exact path='/contact' component={Contact}/>
 					<Route exact path='/showcase' component={DemoList}/>
 					<Route exact path='/demo/:id' component={Demo}/>
 				</Switch>

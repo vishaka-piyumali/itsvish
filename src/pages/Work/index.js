@@ -7,14 +7,14 @@ class Work extends Component {
 
 	render() {
 		const myWork = [{
-			'title': 'Personal Portfolio',
-			'description': 'This is my online portfolio hand-crafted myself using ReactJs framework. If you are keen to look at the code behind, click here to check it out in the github.',
-			'link': '//github.com/vishaka-piyumali/portfolio',
-			'linkDesc': 'click here to open in a new window'
-		},{
 			'title': 'Professional work',
 			'description': 'Web Developer with a JAVA background(SCJP certified) and 8+ years of experience in Commercial Software Industry specialised in HTML, advanced Javascript, CSS and server side scripting technologies. Click here to contact me for a detailed resume.',
 			'link': 'mailto:vishakapiyumali@gmail.com',
+			'linkDesc': 'click here to open in a new window'
+		}, {
+			'title': 'Personal Projects',
+			'description': 'This online portfolio hand-crafted myself using ReactJs framework. If you are keen to look at the code behind, click here to check it out in the github along many other projects.',
+			'link': '//github.com/vishaka-piyumali/portfolio',
 			'linkDesc': 'click here to open in a new window'
 		}];
 		return (

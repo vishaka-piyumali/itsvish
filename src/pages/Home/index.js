@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import UIKudos from '../../components/UI/Kudos';
+
 import './index.css';
 
 class Home extends Component {
@@ -13,6 +15,7 @@ class Home extends Component {
 				<p>
 					I am passionate about creating clean, unique, responsive, accessible and elegant web sites for better user experience.
 				</p>
+				<UIKudos pageName="itsvish.com:home"/>
 			</div>
 	)}
 }

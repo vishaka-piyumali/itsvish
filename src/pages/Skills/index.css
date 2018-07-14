@@ -15,7 +15,7 @@
 }
 
 .skill-categories .category:hover {
-	background: gold;
+	background: whitesmoke;
 }
 
 .skill-categories .category .title {
@@ -31,11 +31,21 @@
 	padding: 5px;
 
 }
+
 .skill-categories .category .skillset .skill {
 	opacity: 0.5;
 	padding: 5px;
 	margin-left: 0;
 	border-right: 1px solid #ccc;
+
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+	.skill-categories .category .skillset .skill {
+		display: block;
+		border: none;
+	}
 }
 .skill-categories .category .skillset .skill:last-child {
 	border: none;
