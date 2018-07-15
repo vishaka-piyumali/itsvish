@@ -24,3 +24,10 @@ footer ul li a:hover {
     color: black;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px gold, 0 0 30px gold, 0 0 40px gold, 0 0 50px gold, 0 0 75px gold;
 }
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    footer .menu a {
+        padding: 5px;
+    }
+}
