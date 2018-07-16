@@ -29,18 +29,18 @@ class Skills extends Component {
 		return (
 			<div>
 				<Row className="section-skills">
-					<Column className="show-for-large-only" medium={6}>
+					<Column className="show-for-large" medium={6}>
 						<img src={skillsBanner} alt="skills" />
 					</Column>
 					<Column mediumn={12} large={6}>
-						<ul class="skill-categories">
+						<ul className="skill-categories">
 							{skills.map((category) => {
 								return (
-									<li class="category" title="40">
-										<div class="title">{category.title}</div>
-										<div class="skillset">
+									<li key={category.title} className="category" title="40">
+										<div className="title">{category.title}</div>
+										<div className="skillset">
 											{category.skills.map((skill) => {
-											 return <span class="skill">{skill}</span>
+											 return <span key={skill} className="skill">{skill}</span>
 											})}
 										</div>
 									</li>

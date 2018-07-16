@@ -11,7 +11,7 @@ class DemoList extends Component {
 	render() {
 		const demoList = [{
 			'title': 'Weather Widget',
-			'description': 'This is a frontend implementation of openweather api to display the current weather status based on the geo location',
+			'description': 'This is a frontend implementation of openweather api to display the current weather status based on the geo location.',
 			'link': '/demos/weatherwidget',
 			'thumb': weatherWidget,
 			'linkDesc': 'click here'
@@ -27,13 +27,13 @@ class DemoList extends Component {
 			<div>
 				{demoList.map((demo) => {
 					return (
-						<section className="demo-item">
+						<section key={demo.title} className="demo-item">
 							<a href={demo.link} alt={demo.title}>
 								<Row>
-									<Column large={4}>
+									<Column medium={4} className="medium-push-2">
 										<img width="400px" src={demo.thumb} alt={demo.title} />
 									</Column>
-									<Column large={8}>
+									<Column medium={4} className="medium-pull-2">
 										<h2>{demo.title}</h2>
 										<p>{demo.description}</p>
 									</Column>

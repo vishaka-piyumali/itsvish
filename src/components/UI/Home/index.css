@@ -7,7 +7,9 @@
     max-width: 550px;
     margin: 0 auto;
 }
-
+.about-section h1 {
+    margin-top: 40px;
+}
 .about-section p {
 
     font-family: 'primary-header-family';

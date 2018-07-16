@@ -5,20 +5,14 @@ import '../styles/foundation.6.4.css';
 
 import './App.css';
 
-import UIHeader from '../components/UI/Header';
-import UIMain from '../components/UI/Main';
-import UIFooter from '../components/UI/Footer';
+import UIPage from '../components/UI/Page';
 
 class App extends Component {
 
 	render() {
 		return (
 			<div className="App">
-				<div>
-					<UIHeader />
-					<UIMain />
-					<UIFooter />
-				</div>
+				<UIPage />
 			</div>
 		);
 	}

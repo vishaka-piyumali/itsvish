@@ -1,0 +1,13 @@
+.demo-item {
+    padding: 100px 0;
+    background: whitesmoke;
+    border-bottom: 1px solid lightgrey;
+}
+
+.demo-item a {
+    color: #777;
+}
+.demo-item h2 {
+    text-align: left;
+    margin-top: 8px;
+}
