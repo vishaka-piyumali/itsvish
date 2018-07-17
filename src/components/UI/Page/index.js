@@ -13,50 +13,61 @@ import DemoList from '../DemoList';
 import Skills from '../Skills';
 
 import './index.css';
-
 import logo from './logo.png';
+
+const SiteLogo = props => (
+	<NavLink exact to="/" activeClassName="selected" >
+		<img className="logo" src={logo} width="100px" alt="Vishaka Wele Uhulangage - Sydney based web developer" />
+	</NavLink>
+);
+
+const SiteNav = props => (
+	<ul className="menu align-right">
+		<li>
+			<NavLink exact to="/" activeClassName="selected" >Home</NavLink>
+		</li>
+		<li>
+			<NavLink to="/showcase" activeClassName="selected" >Showcase</NavLink>
+		</li>
+		<li>
+			<a href="//github.com/vishaka-piyumali" rel="noopener noreferrer" target="_blank" >GitHub</a>
+		</li>
+		<li>
+			<NavLink to="/skills" activeClassName="selected" >Skills</NavLink>
+		</li>
+	</ul>
+);
 
 const Header = props => (
 	<header>
 		<Row>
 			<Column small={2}>
-				<NavLink exact to="/" activeClassName="selected" >
-					<img className="logo" src={logo} width="100px" alt="Vishaka Wele Uhulangage - Sydney based web developer" />
-				</NavLink>
+				<SiteLogo />
 			</Column>
 			<Column small={10}>
-				<ul className="menu align-right">
-					<li>
-						<NavLink exact to="/" activeClassName="selected" >Home</NavLink>
-					</li>
-					<li>
-						<NavLink to="/showcase" activeClassName="selected" >Showcase</NavLink>
-					</li>
-					<li>
-						<a href="//github.com/vishaka-piyumali" rel="noopener noreferrer" target="_blank" >GitHub</a>
-					</li>
-					<li>
-						<NavLink to="/skills" activeClassName="selected" >Skills</NavLink>
-					</li>
-				</ul>
+				<SiteNav />
 			</Column>
 		</Row>
 	</header>
 );
 
+const SocialLinks = props => (
+	<ul className="menu align-center">
+		{SOCIALLINKS.map((social) => {
+			return (
+				<li key={social.link}>
+					<a href={social.link} rel="noopener noreferrer" target="_blank">
+						<Icon name={social.icon}/>
+					</a>
+				</li>
+			)
+		})}
+	</ul>
+);
+
 const Footer = props => (
 	<footer>
-		<ul className="menu align-center">
-			{SOCIALLINKS.map((social) => {
-				return (
-					<li key={social.link}>
-						<a href={social.link} rel="noopener noreferrer" target="_blank">
-							<Icon name={social.icon}/>
-						</a>
-					</li>
-				)
-			})}
-		</ul>
+		<SocialLinks />
 	</footer>
 )
 
