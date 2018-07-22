@@ -79,7 +79,6 @@ class Page extends Component {
 				<main>
 					<Switch>
 						<Route exact path='/' component={Home}/>
-						<Route exact path='/demos' component={DemoList}/>
 						<Route exact path='/skills' component={Skills}/>
 						<Route exact path='/showcase' component={DemoList}/>
 					</Switch>
