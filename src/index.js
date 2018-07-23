@@ -1,11 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+
+import reducers from './reducers';
 import App from './apps/App';
 
-import { HashRouter } from 'react-router-dom';
+import { Route, HashRouter  } from 'react-router-dom';
+
+const createStoreFromReducers = applyMiddleware ()(createStore);
 
 ReactDOM.render((
-	<HashRouter>
-		<App />
-	</HashRouter>
+	<Provider store={createStoreFromReducers(reducers)}>
+		<HashRouter>
+			<Route component={App} />
+		</HashRouter>
+	</Provider>
 ), document.getElementById('root'));

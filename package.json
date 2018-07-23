@@ -9,9 +9,11 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-foundation": "^0.9.5",
-    "react-iframe": "^1.2.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/sass/**/*.scss --include-path ./node_modules/foundation-sites/scss -o src/styles/",

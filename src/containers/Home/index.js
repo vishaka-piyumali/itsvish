@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import UIKudos from '../Kudos/index';
+import UIKudos from '../../components/UI/Kudos/index';
 
 import './index.css';
 
