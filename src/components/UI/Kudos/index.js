@@ -43,7 +43,6 @@ class Kudos extends Component {
 		});
 	}
 
-
 	sendKudos () {
 		const url = URLS.SEND_KUDOS_URL;
 		const data ={ pageName: this.state.pageName};

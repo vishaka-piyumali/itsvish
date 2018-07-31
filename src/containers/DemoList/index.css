@@ -1,7 +1,17 @@
+.demo-list-container {
+    padding-top: 100px;
+}
+
 .demo-item {
-    padding: 100px 0;
+    padding: 10px;
+    height: 400px;
+    overflow: hidden;
+    border: 1px transparent;
+}
+
+.demo-item.active {
     background: whitesmoke;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: transparent;
 }
 
 .demo-item a {
@@ -10,4 +20,10 @@
 .demo-item h2 {
     text-align: left;
     margin-top: 8px;
+}
+
+.demo-details {
+    background: whitesmoke;
+    padding: 10px;
+    margin-bottom: 100px;
 }
