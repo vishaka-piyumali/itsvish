@@ -1,6 +1,7 @@
 .kudos {
     margin-top: 50px;
     text-transform: uppercase;
+    text-align: center;
 }
 .kudos div {
     font-family: 'primary-header-family';
@@ -11,7 +12,7 @@
     display: block;
 }
 .kudos .icon {
-    color: #777;
+    color: dimgrey;
 }
 .kudos .icon:hover {
      color: gold;
