@@ -1,7 +1,6 @@
 .kudos {
     margin-top: 50px;
-    text-transform: uppercase;
-    text-align: center;
+    text-transform: uppercase;;
 }
 .kudos div {
     font-family: 'primary-header-family';

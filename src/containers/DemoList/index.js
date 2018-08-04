@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import { connect } from 'react-redux';
 
-import { selectDemo } from '../../actions';
+import { selectDemo, fetchKudos } from '../../actions';
 import { bindActionCreators } from 'redux';
 
 import { Row, Column } from 'react-foundation';
@@ -14,16 +14,23 @@ import DemoDetail from '../DemoDetail';
 
 class DemoList extends Component {
 
+	constructor (props) {
+		super(props);
+		this.showDemoDetails = this.showDemoDetails.bind(this);
+	}
+
+	showDemoDetails (demo) {
+		this.props.activeDemo(demo);
+		this.props.fetchKudos(demo.id);
+	}
 
 	renderDemoList (demo) {
 		return (
-			<Column key={demo.title} large={4} onClick={() => this.props.activeDemo(demo)} >
+			<Column key={demo.title} large={4} onClick={()=>{this.showDemoDetails(demo)}} >
 				<section className={classnames({'demo-item':true, 'active': this.props.selectedDemo.title === demo.title})} >
 					<Row>
 						<Column medium={12}>
 							<img width="400px" src={demo.thumbnail} alt={demo.title} />
-							<h2>{demo.title}</h2>
-							<p>{demo.description}</p>
 						</Column>
 					</Row>
 				</section>
@@ -41,7 +48,7 @@ class DemoList extends Component {
 					</Row>
 					<Row>
 						<Column>
-							<DemoDetail className="demo-details" />
+							<DemoDetail />
 						</Column>
 					</Row>
 				</Column>
@@ -52,6 +59,7 @@ class DemoList extends Component {
 function mapStateToProps (state) {
 	return {
 		demos: state.demos,
+		kudos: state.kudos,
 		selectedDemo: state.activeDemo || {}
 	}
 }
@@ -60,6 +68,10 @@ function mapStateToProps (state) {
 activeDemo will be added to the props
  */
 function mapDispatchToProps (dispatch) {
-	return bindActionCreators ({ activeDemo: selectDemo }, dispatch)
+	return bindActionCreators (
+		{
+			activeDemo: selectDemo,
+			fetchKudos
+		}, dispatch)
 }
 export default  connect(mapStateToProps, mapDispatchToProps)(DemoList);

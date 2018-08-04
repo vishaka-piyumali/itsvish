@@ -3,21 +3,25 @@ import { URLS } from '../../../utils/Constants';
 import classnames from 'classnames';
 
 import './index.css';
+import { fetchKudos } from '../../../actions';
+
+import { bindActionCreators } from 'redux';
+
+import { connect } from 'react-redux';
 
 class Kudos extends Component {
 
 	constructor (props) {
 		super(props);
 		this.state = {
-			kudos: 0,
-			pageName: props.pageName,
 			liked: false
 		};
 		this.sendKudos = this.sendKudos.bind(this);
 	}
 	componentDidMount () {
-		this.getKudos();
-		this.getLocalStatus();
+		//this.getKudos();
+		//this.getLocalStatus();
+		this.props.fetchKudos(this.props.pageName);
 	}
 
 	// read local storage to see if user already sent kudos
@@ -77,9 +81,24 @@ class Kudos extends Component {
 						})} >
 					</span>
 				</a>
-				<div>{this.state.kudos} Kudos</div>
+				<div>{this.props.kudos} Kudos</div>
 			</div>
 		)}
 }
 
-export default Kudos;
+function mapStateToProps (state) {
+	return {
+		kudos: state.kudos
+	}
+}
+
+/*
+ activeDemo will be added to the props
+ */
+function mapDispatchToProps (dispatch) {
+	return bindActionCreators (
+			{
+				fetchKudos
+			}, dispatch)
+}
+export default  connect(mapStateToProps, mapDispatchToProps)(Kudos);

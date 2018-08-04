@@ -1,19 +1,16 @@
 .demo-list-container {
-    padding-top: 100px;
-}
 
+}
 .demo-item {
     padding: 10px;
-    height: 400px;
+    height: 300px;
     overflow: hidden;
     border: 1px transparent;
 }
-
 .demo-item.active {
     background: whitesmoke;
     border-bottom: transparent;
 }
-
 .demo-item a {
     color: #777;
 }
@@ -21,9 +18,17 @@
     text-align: left;
     margin-top: 8px;
 }
-
 .demo-details {
     background: whitesmoke;
     padding: 10px;
     margin-bottom: 100px;
+}
+.kudos {
+    width: 65px;
+    text-align: right;
+    display: inline-block;
+}
+
+.kudos.loading {
+    background: url(/assets/images/loader.gif) -86px -106px no-repeat;
 }
