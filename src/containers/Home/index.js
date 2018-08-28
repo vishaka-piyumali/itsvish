@@ -2,10 +2,19 @@ import React, { Component } from 'react';
 
 import UIKudos from '../../components/UI/Kudos/index';
 
+import { connect } from 'react-redux';
+
+import { fetchKudos } from '../../actions';
+import { bindActionCreators } from 'redux';
 import './index.css';
 
 class Home extends Component {
-	render() {
+	constructor (props) {
+		super(props);
+		this.props.fetchKudos('itsvish.com:home');
+	}
+
+	render () {
 		return (
 			<div className="about-section">
 				<h1>Hey there!</h1>
@@ -20,4 +29,19 @@ class Home extends Component {
 	)}
 }
 
-export default Home;
+function mapStateToProps (state) {
+	return {
+		kudos: state.kudos
+	}
+}
+
+/*
+ activeDemo will be added to the props
+ */
+function mapDispatchToProps (dispatch) {
+	return bindActionCreators (
+			{
+				fetchKudos
+			}, dispatch)
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -19,3 +19,13 @@
 .kudos .icon.liked {
      color: lightgrey;
 }
+
+.kudos .status {
+    width: 65px;
+    text-align: right;
+    display: inline-block;
+}
+
+.kudos .status.loading {
+    background: url('/assets/images/loader.gif') -96px -112px no-repeat;
+}

@@ -23,12 +23,3 @@
     padding: 10px;
     margin-bottom: 100px;
 }
-.kudos {
-    width: 65px;
-    text-align: right;
-    display: inline-block;
-}
-
-.kudos.loading {
-    background: url(/assets/images/loader.gif) -86px -106px no-repeat;
-}
