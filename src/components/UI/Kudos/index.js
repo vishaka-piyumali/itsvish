@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { URLS } from '../../../utils/Constants';
+
 import classnames from 'classnames';
+
+import { fetchKudos, sendKudos } from '../../../actions';
+
+import { bindActionCreators } from 'redux';
 
 import './index.css';
 
@@ -13,51 +17,33 @@ class Kudos extends Component {
 		this.state = {
 			liked: false
 		};
+
+		this.props.fetchKudos(this.props.pageName);
+		this.getLocalStatus();
 		this.sendKudos = this.sendKudos.bind(this);
 	}
 
 	// read local storage to see if user already sent kudos
 	getLocalStatus () {
 		this.setState({
-			liked: window.localStorage.getItem("kudos") || false
-		});
-	}
-
-	getKudos () {
-		const url = URLS.READ_KUDOS_URL;
-		const data ={ pageName: this.state.pageName}
-
-		fetch(url, {
-			method: 'POST',
-			body: JSON.stringify(data)
-		})
-		.then(response => response.json())
-		.then(data => {
-			this.setState({
-				kudos: data[0].kudos
-			})
+			liked: window.localStorage.getItem(this.props.pageName) === 'true' || false
 		});
 	}
 
 	sendKudos () {
-		const url = URLS.SEND_KUDOS_URL;
-		const data ={ pageName: this.state.pageName};
+
+		const data = { pageName: this.props.pageName };
 
 		if (this.state.liked) {
 			return false;
 		}
 
-		fetch(url, {
-			method: 'POST',
-			body: JSON.stringify(data)
-		})
-		.then(response => response.json())
-		.then(data => {
+		this.props.sendKudos(data.pageName)
+		.then(() => {
 			this.setState({
 				liked: true
 			});
-			window.localStorage.setItem("kudos", true);
-			this.getKudos();
+			window.localStorage.setItem(data.pageName, true);
 		});
 	}
 
@@ -93,4 +79,12 @@ function mapStateToProps (state) {
 	}
 }
 
-export default  connect(mapStateToProps)(Kudos);
+function mapDispatchToProps (dispatch) {
+	return bindActionCreators (
+		{
+			sendKudos,
+			fetchKudos
+		}, dispatch)
+}
+
+export default  connect(mapStateToProps, mapDispatchToProps)(Kudos);

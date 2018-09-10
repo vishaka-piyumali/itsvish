@@ -74,4 +74,4 @@ function mapDispatchToProps (dispatch) {
 			fetchKudos
 		}, dispatch)
 }
-export default  connect(mapStateToProps, mapDispatchToProps)(DemoList);
+export default connect(mapStateToProps, mapDispatchToProps)(DemoList);

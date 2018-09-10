@@ -4,15 +4,9 @@ import UIKudos from '../../components/UI/Kudos/index';
 
 import { connect } from 'react-redux';
 
-import { fetchKudos } from '../../actions';
-import { bindActionCreators } from 'redux';
 import './index.css';
 
 class Home extends Component {
-	constructor (props) {
-		super(props);
-		this.props.fetchKudos('itsvish.com:home');
-	}
 
 	render () {
 		return (
@@ -35,13 +29,4 @@ function mapStateToProps (state) {
 	}
 }
 
-/*
- activeDemo will be added to the props
- */
-function mapDispatchToProps (dispatch) {
-	return bindActionCreators (
-			{
-				fetchKudos
-			}, dispatch)
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps)(Home);

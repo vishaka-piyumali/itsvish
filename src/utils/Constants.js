@@ -12,7 +12,7 @@ export const ICONS = {
 
 // using absolute paths for endpoints till I set up mocked responses
 export const URLS = {
-	READ_KUDOS_URL: '//www.itsvish.com/read.php',
+	READ_KUDOS_URL: '//www.itsvish.com/readKudos.php',
 	SEND_KUDOS_URL: '//www.itsvish.com/sendKudos.php'
 }
 
