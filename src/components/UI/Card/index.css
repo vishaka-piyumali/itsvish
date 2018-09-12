@@ -47,7 +47,6 @@
 }
 
 .menu-icon {
-
     flex: 0 0 auto;
     width: 48px;
     color: rgba(0, 0, 0, 0.54);
@@ -118,8 +117,7 @@
     color: rgba(0, 0, 0, 0.87);
     font-size: 0.875rem;
     font-weight: 500;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    line-height: 1.71429em;
+    line-height: 1em;
     display: block;
 }
 
@@ -127,14 +125,13 @@
     color: rgba(0, 0, 0, 0.54);
     font-size: 0.875rem;
     font-weight: 500;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    line-height: 1.71429em;
+    line-height: 1em;
 }
 
 .card-footer a {
     flex: 0 0 auto;
     width: 48px;
-    color: rgba(0, 0, 0, 0.54);
+    color: #aba9a9;
     height: 48px;
     padding: 0;
     overflow: visible;
@@ -157,6 +154,6 @@
     text-shadow: none;
 }
 .card-footer a:hover {
-    color: whitesmoke;
-    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 15px #fff, 0 0 20px grey, 0 0 30px grey, 0 0 30px grey, 0 0 50px #ccc, 0 0 55px #ccc;
+    color: darkgrey;
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 15px #fff, 0 0 20px grey, 0 0 30px grey, 0 0 30px grey, 0 0 50px grey, 0 0 55px grey;
 }

@@ -13,7 +13,7 @@ class Home extends Component {
 			<div className="about-section">
 				<h1>Hey there!</h1>
 				<p>
-					I am Vishaka, a front end web developer living in Sydney.
+					I am Vishaka, Sydney based a front end web developer.
 				</p>
 				<p>
 					I am passionate about creating clean, unique, responsive, accessible and elegant web sites for better user experience.

@@ -21,7 +21,7 @@ export default function () {
 			'techStack': ['React CRA']
 		},
 		{
-			'title': 'Chat Bot',
+			'title': 'Small Talk Chat Bot',
 			'id': 'itsvish.com:demo:chat-bot',
 			'description': 'This is a smart chat bot ui integrated with dialogflow smalltalk agent.',
 			'link': '/demos/smalltalk-chatbot',
