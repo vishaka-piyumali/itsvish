@@ -21,8 +21,8 @@ class DemoList extends Component {
 	}
 
 	showDemoDetails (demo) {
-		this.props.activeDemo(demo);
-		this.props.fetchKudos(demo.id);
+		//this.props.activeDemo(demo);
+		//this.props.fetchKudos(demo.id);
 	}
 
 	renderDemoList (demo) {

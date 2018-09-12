@@ -105,6 +105,7 @@
 
 .card-image:hover {
     opacity: 0.5;
+    cursor: hand;
 }
 
 .card-desc {
@@ -156,6 +157,6 @@
     text-shadow: none;
 }
 .card-footer a:hover {
-    color: grey;
-    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 15px #fff, 0 0 20px grey, 0 0 30px grey, 0 0 30px grey, 0 0 50px grey, 0 0 55px grey;
+    color: whitesmoke;
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 15px #fff, 0 0 20px grey, 0 0 30px grey, 0 0 30px grey, 0 0 50px #ccc, 0 0 55px #ccc;
 }
