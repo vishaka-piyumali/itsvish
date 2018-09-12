@@ -11,6 +11,7 @@ import { Row, Column } from 'react-foundation';
 import './index.css';
 
 import DemoDetail from '../DemoDetail';
+import UICard from '../../components/UI/Card';
 
 class DemoList extends Component {
 
@@ -26,11 +27,29 @@ class DemoList extends Component {
 
 	renderDemoList (demo) {
 		return (
-			<Column key={demo.title} large={4} onClick={()=>{this.showDemoDetails(demo)}} >
+			<Column key={demo.title} onClick={()=>{this.showDemoDetails(demo)}} >
 				<section className={classnames({'demo-item':true, 'active': this.props.selectedDemo.title === demo.title})} >
 					<Row>
 						<Column medium={12}>
-							<img width="400px" src={demo.thumbnail} alt={demo.title} />
+							<UICard
+								title={demo.title}
+								description={demo.description}
+								thumbnail={demo.thumbnail}
+								kudos={demo.id}
+								footerLinks={[
+									{
+										icon: 'fi-social-github icon large',
+										label: 'Source Code',
+										link: demo.sourceCode
+									},
+									{
+										icon: 'fi-web icon large',
+										label: 'Live Demo',
+										link: demo.link
+									}
+									]
+								}
+							/>
 						</Column>
 					</Row>
 				</section>
@@ -41,7 +60,7 @@ class DemoList extends Component {
 		return (
 			<Row>
 				<Column>
-					<Row className="demo-list-container">
+					<Row className="collapse medium-up-3 demo-list-container">
 						{this.props.demos.map((demo) => {
 							return this.renderDemoList(demo);
 						})}
