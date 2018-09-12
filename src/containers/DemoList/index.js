@@ -17,13 +17,24 @@ class DemoList extends Component {
 
 	constructor (props) {
 		super(props);
-		this.showDemoDetails = this.showDemoDetails.bind(this);
+		this.getDemoDetails = this.getDemoDetails.bind(this);
 	}
 
-	showDemoDetails (demo) {
+	getDemoDetails (demo) {
 		//this.props.activeDemo(demo);
 		//this.props.fetchKudos(demo.id);
+		return (
+				<div>
+					<h6>Tech Stack</h6>
+				<ul>
+				{demo.techStack.map((skill) => {
+					return <li>{skill}</li>;
+				})}
+				</ul>
+				</div>
+		)
 	}
+
 
 	renderDemoList (demo) {
 		return (
@@ -33,7 +44,7 @@ class DemoList extends Component {
 						<Column medium={12}>
 							<UICard
 								title={demo.title}
-								description={demo.description}
+								description={this.getDemoDetails(demo)}
 								thumbnail={demo.thumbnail}
 								kudos={demo.id}
 								footerLinks={[
@@ -49,6 +60,7 @@ class DemoList extends Component {
 									}
 									]
 								}
+							    secondaryContent={demo.description}
 							/>
 						</Column>
 					</Row>

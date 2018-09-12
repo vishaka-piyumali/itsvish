@@ -8,7 +8,7 @@ export default function () {
 			'thumbnail': '/assets/images/demos/weather-thumb1.png',
 			'sourceCode': 'https://github.com/vishaka-piyumali/weather-widget',
 			'linkDesc': 'Live Demo',
-			'techStack': ['React CRA', 'Open Weather API integration', 'Jest']
+			'techStack': ['React JS Framework', 'Open Weather API integration', 'Webpack', 'Jest']
 		},
 		{
 			'title': 'HCard Builder',
@@ -18,7 +18,7 @@ export default function () {
 			'thumbnail': '/assets/images/demos/vcard-thumb.png',
 			'sourceCode': 'https://github.com/vishaka-piyumali/hcard-builder',
 			'linkDesc': 'Live Demo',
-			'techStack': ['React CRA']
+			'techStack': ['React JS Framework', 'SCSS', 'Foundation']
 		},
 		{
 			'title': 'Small Talk Chat Bot',
@@ -26,9 +26,9 @@ export default function () {
 			'description': 'This is a smart chat bot ui integrated with dialogflow smalltalk agent.',
 			'link': '/demos/smalltalk-chatbot',
 			'thumbnail': '/assets/images/demos/chatbot-thumb2.png',
-			'sourceCode': 'https://github.com/vishaka-piyumali/chatbot',
+			'sourceCode': 'https://github.com/vishaka-piyumali/smalltalk-chatbot',
 			'linkDesc': 'Live Demo',
-			'techStack': ['React CRA', 'Google Dialogflow']
+			'techStack': ['React JS Framework', 'Google Dialogflow', 'Javascrip Api Ai']
 		}
 	];
 }
