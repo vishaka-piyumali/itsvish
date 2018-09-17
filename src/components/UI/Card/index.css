@@ -5,6 +5,7 @@
     border-radius: 4px;
     background-color: #fff;
     height: 500px;
+    margin: 0 auto;
 }
 
 .card-header {
@@ -44,6 +45,10 @@
     align-self: flex-start;
     margin-top: -8px;
     margin-right: -12px;
+}
+
+.header-right .icon {
+    margin-top: 6px;
 }
 
 .menu-icon {
@@ -137,7 +142,7 @@
     overflow: visible;
     font-size: 1.5rem;
     text-align: center;
-    transition: text-shadow 1s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     border-radius: 50%;
     cursor: pointer;
     margin: 0;
@@ -154,9 +159,12 @@
     text-shadow: none;
 }
 .card-footer a:hover {
-    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 15px #fff, 0 0 20px grey, 0 0 30px grey, 0 0 30px grey, 0 0 50px grey, 0 0 55px grey;
+    background-color: rgba(0, 0, 0, 0.08);
 }
 
+.card-footer .menu li{
+    margin-left: 5px;
+}
 /* entire container, keeps perspective */
 .flip-container {
     perspective: 1000px;

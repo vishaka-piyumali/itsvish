@@ -35,7 +35,6 @@ class DemoList extends Component {
 		)
 	}
 
-
 	renderDemoList (demo) {
 		return (
 			<Column key={demo.title} onClick={()=>{this.showDemoDetails(demo)}} >
@@ -45,16 +44,22 @@ class DemoList extends Component {
 							<UICard
 								title={demo.title}
 								description={this.getDemoDetails(demo)}
+								date={demo.date}
 								thumbnail={demo.thumbnail}
 								kudos={demo.id}
 								footerLinks={[
 									{
-										icon: 'fi-social-github icon large',
+										icon: 'fi-heart icon small',
 										label: 'Source Code',
 										link: demo.sourceCode
 									},
 									{
-										icon: 'fi-web icon large',
+										icon: 'fi-social-github icon small',
+										label: 'Source Code',
+										link: demo.sourceCode
+									},
+									{
+										icon: 'fi-web icon small',
 										label: 'Live Demo',
 										link: demo.link
 									}
