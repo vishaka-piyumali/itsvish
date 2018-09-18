@@ -118,7 +118,6 @@ header a.selected {
 }
 main {
   overflow: scroll;
-  margin-top: 100px;
   min-height: calc(100vh - 200px);
 }
 

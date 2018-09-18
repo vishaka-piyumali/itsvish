@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
-import UIKudos from '../Kudos';
 
 import './index.css';
 
 const CardHeader = props => (
 	<div class="card-header">
 		<div class="header-left">
-			<div class="card-icon" aria-label="card">D</div>
+			<div class="card-icon" aria-label="card"><img src={props.icon} alt={props.iconText} title={props.iconText}  width="100%" height="100%"/></div>
 		</div>
 		<div class="header-middle">
 			<span class="title">{props.title}</span>
 			<span class="subtitle">{props.date}</span>
-		</div>
-		<div class="header-right">
-			<button tabindex="0" class="menu-icon" type="button">
-				<span class="menu-icon-inner">
-					<span className="fi-heart large icon" rel="noopener noreferrer" aria-hidden="true"></span>
-				</span>
-			</button>
 		</div>
 	</div>
 );
@@ -26,7 +18,7 @@ const FlipContent = props => (
 	<div className="flip-container">
 		<div className="flipper">
 			<div className="front">
-				<img class="card-image" src={props.thumbnail} title={props.shortDesc} />
+				<img class="card-image" src={props.thumbnail} title={props.shortDesc} alt={props.shortDesc} />
 			</div>
 			<div className="back">
 				{props.secondaryContent}
@@ -41,7 +33,7 @@ const CardFooter = props => (
 			{props.footerLinks.map((footerlink) => {
 				return (
 					<li key={footerlink.title}>
-						<a href={footerlink.link} alt={footerlink.label} rel="noopener noreferrer" target="_blank">
+						<a href={footerlink.link} title={footerlink.label} alt={footerlink.label} rel="noopener noreferrer" target="_blank">
 							<span class={footerlink.icon} rel="noopener noreferrer" aria-hidden="true"></span>
 						</a>
 					</li>
@@ -57,8 +49,15 @@ export default class Card extends Component {
 	render () {
 		return (
 			<div className="card">
-				<CardHeader title={this.props.title} date={this.props.date} />
-				<FlipContent thumbnail={this.props.thumbnail} shortDesc={this.props.title} secondaryContent={this.props.secondaryContent} />
+				<CardHeader
+						title={this.props.title}
+						icon={this.props.headerBadge}
+						iconText={this.props.headerBadgeText}
+						date={this.props.date} />
+				<FlipContent
+						thumbnail={this.props.thumbnail}
+						shortDesc={this.props.title}
+						secondaryContent={this.props.secondaryContent} />
 				<div class="card-desc">
 					<div>{this.props.description}</div>
 				</div>

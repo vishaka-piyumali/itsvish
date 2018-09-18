@@ -45,6 +45,8 @@ class DemoList extends Component {
 								title={demo.title}
 								description={this.getDemoDetails(demo)}
 								date={demo.date}
+								headerBadge={demo.heroTechImage}
+								headerBadgeText={demo.heroTechText}
 								thumbnail={demo.thumbnail}
 								kudos={demo.id}
 								footerLinks={[
