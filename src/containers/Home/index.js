@@ -18,7 +18,7 @@ class Home extends Component {
 				<p>
 					I am passionate about creating clean, unique, responsive, accessible and elegant web sites for better user experience.
 				</p>
-				<UIKudos pageName="itsvish.com:home"/>
+				<UIKudos pageName="itsvish.com:demo:itsvish-v2"/>
 			</div>
 	)}
 }

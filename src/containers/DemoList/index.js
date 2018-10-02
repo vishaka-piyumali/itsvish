@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import { connect } from 'react-redux';
 
-import { selectDemo, fetchKudos } from '../../actions';
+import { selectDemo, fetchKudosForDemos } from '../../actions';
 import { bindActionCreators } from 'redux';
 
 import { Row, Column } from 'react-foundation';
@@ -16,26 +16,19 @@ import UICard from '../../components/UI/Card';
 class DemoList extends Component {
 
 	constructor (props) {
+
 		super(props);
-		this.getDemoDetails = this.getDemoDetails.bind(this);
+		this.props.fetchKudosForDemos();
+		this.showDemoDetails = this.showDemoDetails.bind(this);
+
 	}
 
-	getDemoDetails (demo) {
-		//this.props.activeDemo(demo);
-		//this.props.fetchKudos(demo.id);
-		return (
-				<div>
-					<h6>Tech Stack</h6>
-				<ul>
-				{demo.techStack.map((skill) => {
-					return <li>{skill}</li>;
-				})}
-				</ul>
-				</div>
-		)
+	showDemoDetails (demo) {
+		console.log('placeholder..');
 	}
 
 	renderDemoList (demo) {
+		//let kudos = this.getKudos(demo.id);
 		return (
 			<Column key={demo.title} onClick={()=>{this.showDemoDetails(demo)}} >
 				<section className={classnames({'demo-item':true, 'active': this.props.selectedDemo.title === demo.title})} >
@@ -43,18 +36,12 @@ class DemoList extends Component {
 						<Column medium={12}>
 							<UICard
 								title={demo.title}
-								description={this.getDemoDetails(demo)}
 								date={demo.date}
 								headerBadge={demo.heroTechImage}
 								headerBadgeText={demo.heroTechText}
 								thumbnail={demo.thumbnail}
-								kudos={demo.id}
+								footerStickyContent={demo.kudos + ' KUDOS'}
 								footerLinks={[
-									{
-										icon: 'fi-heart icon small',
-										label: 'Source Code',
-										link: demo.sourceCode
-									},
 									{
 										icon: 'fi-social-github icon small',
 										label: 'Source Code',
@@ -76,28 +63,33 @@ class DemoList extends Component {
 		)
 	}
 	render () {
-		return (
-			<Row>
-				<Column>
-					<Row className="collapse medium-up-3 demo-list-container">
-						{this.props.demos.map((demo) => {
-							return this.renderDemoList(demo);
-						})}
-					</Row>
+		if (this.props.demos == null) {
+			return <div>demos loading...</div>;
+		}
+		else {
+			return (
 					<Row>
 						<Column>
-							<DemoDetail />
+							<Row className="collapse medium-up-3 demo-list-container">
+								{Object.values(this.props.demos).map((demo) => {
+									return this.renderDemoList(demo);
+								})}
+							</Row>
+							<Row>
+								<Column>
+									<DemoDetail />
+								</Column>
+							</Row>
 						</Column>
 					</Row>
-				</Column>
-			</Row>
-		)}
+			)
+		}
+	}
 }
 
 function mapStateToProps (state) {
 	return {
 		demos: state.demos,
-		kudos: state.kudos,
 		selectedDemo: state.activeDemo || {}
 	}
 }
@@ -109,7 +101,7 @@ function mapDispatchToProps (dispatch) {
 	return bindActionCreators (
 		{
 			activeDemo: selectDemo,
-			fetchKudos
+			fetchKudosForDemos
 		}, dispatch)
 }
 export default connect(mapStateToProps, mapDispatchToProps)(DemoList);

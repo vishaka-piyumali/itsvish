@@ -4,6 +4,4 @@ export default function (state = null, action) {
 		case 'DEMO_SELECTED': return action.payload;
 		default: return state;
 	}
-
-	//return state;
 }

@@ -18,9 +18,12 @@ class Kudos extends Component {
 			liked: false
 		};
 
-		this.props.fetchKudos(this.props.pageName);
-		this.getLocalStatus();
 		this.sendKudos = this.sendKudos.bind(this);
+	}
+
+	componentDidMount () {
+		this.getLocalStatus();
+		this.props.fetchKudos(this.props.pageName);
 	}
 
 	// read local storage to see if user already sent kudos
@@ -59,7 +62,7 @@ class Kudos extends Component {
 	render () {
 		return (
 			<div className="kudos">
-				<a alt={this.state.liked?'Thank you':'Kudos for this portfolio?'} title={this.state.liked?'Thank you':'Kudos for this portfolio?'} onClick={this.sendKudos}>
+				<a alt='Kudos for this' onClick={this.sendKudos}>
 					<span className={
 						classnames({
 							'icon': true,

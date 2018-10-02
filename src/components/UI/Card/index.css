@@ -157,6 +157,13 @@
     background-color: transparent;
     text-shadow: none;
 }
+
+.sticky-link a {
+    font-size: 14px;
+    width: fit-content;
+    color: black;
+}
+
 .card-footer a:hover {
     background-color: rgba(0, 0, 0, 0.08);
 }
