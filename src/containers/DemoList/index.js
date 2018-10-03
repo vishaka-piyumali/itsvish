@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import { connect } from 'react-redux';
 
-import { selectDemo, fetchKudosForDemos } from '../../actions';
+import { selectDemo, sendKudos, fetchKudosForDemos } from '../../actions';
 import { bindActionCreators } from 'redux';
 
 import { Row, Column } from 'react-foundation';
@@ -20,11 +20,41 @@ class DemoList extends Component {
 		super(props);
 		this.props.fetchKudosForDemos();
 		this.showDemoDetails = this.showDemoDetails.bind(this);
-
 	}
 
 	showDemoDetails (demo) {
 		console.log('placeholder..');
+	}
+
+	sendKudos (demo, e) {
+
+		const data = { pageName: demo.id };
+
+		/* if (this.state.liked) {
+			return false;
+		} */
+
+		this.props.sendKudos(data.pageName)
+		.then(() => {
+			/* this.setState({
+				liked: true
+			}); */
+			window.localStorage.setItem(data.pageName, true);
+			this.props.fetchKudosForDemos();
+		});
+	}
+
+	renderSkills (demo) {
+		return (
+			<div>
+				<h6>Tech Stack</h6>
+				<ul>
+					{demo.techStack.map((skill) => {
+						return <li key={skill}>{skill}</li>;
+					})}
+				</ul>
+			</div>
+		)
 	}
 
 	renderDemoList (demo) {
@@ -37,6 +67,7 @@ class DemoList extends Component {
 							<UICard
 								title={demo.title}
 								date={demo.date}
+								description={this.renderSkills(demo)}
 								headerBadge={demo.heroTechImage}
 								headerBadgeText={demo.heroTechText}
 								thumbnail={demo.thumbnail}
@@ -54,7 +85,9 @@ class DemoList extends Component {
 									}
 									]
 								}
+								active={demo.liked}
 							    secondaryContent={demo.description}
+								headerClickAction={this.sendKudos.bind(this, demo)}
 							/>
 						</Column>
 					</Row>
@@ -101,6 +134,7 @@ function mapDispatchToProps (dispatch) {
 	return bindActionCreators (
 		{
 			activeDemo: selectDemo,
+			sendKudos,
 			fetchKudosForDemos
 		}, dispatch)
 }

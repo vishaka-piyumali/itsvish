@@ -12,9 +12,9 @@ const CardHeader = props => (
 			<span className="subtitle">{props.date}</span>
 		</div>
 		<div className="header-right">
-			<a href="" title="" alt="" rel="noopener noreferrer" target="_blank">
-				<span className="icon small fi-heart" rel="noopener noreferrer" aria-hidden="true"></span>
-			</a>
+			<button onClick={props.headerClickAction} >
+				<span className={props.active?'active icon small fi-heart':'icon small fi-heart'} rel="noopener noreferrer" aria-hidden="true"></span>
+			</button>
 		</div>
 	</div>
 );
@@ -34,20 +34,21 @@ const FlipContent = props => (
 
 const CardFooter = props => (
 	<div className="card-footer">
-			<ul className="menu align-left">
+			<ul className="footer-left menu">
 				{props.items.map((links, index) => {
 					return (
-						<li key={index}>
+						<li className="footer-left " key={index}>
 							<a href={links.link} title={links.label} alt={links.label} rel="noopener noreferrer" target="_blank">
 								<span className={links.icon} rel="noopener noreferrer" aria-hidden="true"></span>
 							</a>
 						</li>
 					)
 				})}
-				<li className="sticky-link">
-					<span><a href="#" title="" alt="" rel="noopener noreferrer" target="_blank">{props.stickyContent}</a></span>
-				</li>
 			</ul>
+			<div className="footer-middle"></div>
+			<div className="footer-right sticky-link">
+				<span>{props.stickyContent}</span>
+			</div>
 	</div>
 );
 
@@ -58,14 +59,16 @@ export default class Card extends Component {
 		return (
 			<div className="card">
 				<CardHeader
-						title={this.props.title}
-						icon={this.props.headerBadge}
-						iconText={this.props.headerBadgeText}
-						date={this.props.date} />
+					title={this.props.title}
+					icon={this.props.headerBadge}
+					iconText={this.props.headerBadgeText}
+					date={this.props.date}
+					active={this.props.active}
+					headerClickAction={this.props.headerClickAction} />
 				<FlipContent
-						thumbnail={this.props.thumbnail}
-						shortDesc={this.props.title}
-						secondaryContent={this.props.secondaryContent} />
+					thumbnail={this.props.thumbnail}
+					shortDesc={this.props.title}
+					secondaryContent={this.props.secondaryContent} />
 				<div className="card-desc">
 					<div>{this.props.description}</div>
 				</div>
