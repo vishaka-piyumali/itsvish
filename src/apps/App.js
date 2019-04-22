@@ -24,7 +24,7 @@ const SiteLogo = props => (
 );
 
 const SiteNav = props => (
-	<ul className="menu align-right">
+	<ul className="menu site-nav vertical align-left">
 		<li>
 			<NavLink exact to="/" activeClassName="selected" >Home</NavLink>
 		</li>
@@ -40,21 +40,9 @@ const SiteNav = props => (
 	</ul>
 );
 
-const Header = props => (
-	<header>
-		<Row>
-			<Column small={2}>
-				<SiteLogo />
-			</Column>
-			<Column small={10}>
-				<SiteNav />
-			</Column>
-		</Row>
-	</header>
-);
 
 const SocialLinks = props => (
-	<ul className="menu align-center">
+	<ul className="menu social align-center">
 		{SOCIALLINKS.map((social) => {
 			return (
 					<li key={social.link}>
@@ -67,25 +55,31 @@ const SocialLinks = props => (
 	</ul>
 );
 
-const Footer = props => (
-	<footer>
-		<SocialLinks />
-	</footer>
+const QuickLinks = props => (
+		<div class="quick-links">
+			<SiteNav />
+			<SocialLinks/>
+		</div>
 )
 
 class App extends Component {
 	render() {
 		return (
 			<div>
-				<Header />
 				<main>
-					<Switch>
-						<Route exact path='/' component={Home}/>
-						<Route path='/skills' component={Skills}/>
-						<Route path='/showcase' component={DemoList}/>
-					</Switch>
+					<Row>
+						<Column large={3}>
+							<QuickLinks />
+						</Column>
+						<Column large={9}>
+							<Switch>
+								<Route exact path='/' component={Home}/>
+								<Route path='/skills' component={Skills}/>
+								<Route path='/showcase' component={DemoList}/>
+							</Switch>
+						</Column>
+					</Row>
 				</main>
-				<Footer />
 			</div>
 		);
 	}

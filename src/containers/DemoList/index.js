@@ -103,7 +103,7 @@ class DemoList extends Component {
 			return (
 					<Row>
 						<Column>
-							<Row className="collapse medium-up-3 demo-list-container">
+							<Row className="collapse medium-up-2 demo-list-container">
 								{Object.values(this.props.demos).map((demo) => {
 									return this.renderDemoList(demo);
 								})}

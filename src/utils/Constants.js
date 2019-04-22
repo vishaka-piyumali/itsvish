@@ -7,7 +7,8 @@ export const ICONS = {
 	SKILLS: 'fi-database',
 	CONTACT: 'fi-mail',
 	EMAIL: 'fi-mail',
-	HOME: 'fi-home'
+	HOME: 'fi-home',
+	WEB: 'fi-web'
 };
 
 // using absolute paths for endpoints till I set up mocked responses
@@ -32,7 +33,7 @@ export const SOCIALLINKS = [{
 		icon: ICONS.EMAIL
 	},
 	{
-		link: '//www.facebook.com/vishakapiyumali',
-		desc: 'Facebook',
-		icon: ICONS.FACEBOOK
+		link: 'www.itsvish.com',
+		desc: 'Web',
+		icon: ICONS.WEB
 	}];

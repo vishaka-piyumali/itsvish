@@ -69,96 +69,35 @@ h2 {
 hr {
   margin: 1em auto 2em;
 }
-header {
-  background: #404244;
-  padding: 20px;
-  color: #fff;
-  border-bottom: 5px solid gold;
-  position: fixed;
-  top: 0;
-  width:100vw;
-  height: 100px;
-  z-index: 999;
-}
 
-header .logo,
-header .menu {
-  margin-top: 10px;
-}
-
-header li:last-child::after {
-  content: none;
-}
-
-header a {
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: 'primary-header-family';
-}
-
-header a:hover {
+.site-nav a:hover {
   color: gold;
 }
 
-header a.selected {
+.site-nav a.selected {
   color: gold;
 }
 
-/* Small only */
-@media screen and (max-width: 39.9375em) {
-  header {
-    padding: 0;
-    height: 60px;
-  }
-  header .menu a {
-    font-size: 10px;
-    padding: 0.8rem .5rem;
-  }
-}
 main {
   overflow: scroll;
   min-height: calc(100vh - 200px);
 }
 
-/* Small only */
-@media screen and (max-width: 39.9375em) {
-  main {
-    padding: 0;
-    margin-top: 75px;
-  }
+.menu.social {
+  background: whitesmoke;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
-
-footer {
-  padding: 20px;
-  background: #404244;
+.menu .icon {
+  color: #4F4F4F;
+  font-size: 27px;
+}
+.site-nav {
+  margin-bottom: 60px;
+  position: absolute;
+  bottom: 20px;
+}
+.site-nav a {
   color: white;
-  width: 100vw;
-}
-footer ul::after {
-  clear: both;
-}
-
-footer ul li {
-  float: left;
-  list-style: none;
-  padding: 10px;
-}
-
-footer ul li a,
-footer ul li a:active {
-  color: white;
-  display: block;
-}
-
-footer ul li a:hover {
-  color: black;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px gold, 0 0 30px gold, 0 0 40px gold, 0 0 50px gold, 0 0 75px gold;
-}
-
-/* Small only */
-@media screen and (max-width: 39.9375em) {
-  footer .menu a {
-    padding: 5px;
-  }
 }
