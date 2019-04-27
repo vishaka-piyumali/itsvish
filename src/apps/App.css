@@ -81,6 +81,8 @@ hr {
 main {
   overflow: scroll;
   min-height: calc(100vh - 200px);
+ /* background-size: cover;
+  background-image: url('/assets/images/background.png');*/
 }
 
 .menu.social {
@@ -88,6 +90,9 @@ main {
   position: absolute;
   bottom: 0;
   width: 100%;
+  opacity: 0.4;
+
+  border-top: 5px solid gold;
 }
 .menu .icon {
   color: #4F4F4F;
@@ -97,6 +102,7 @@ main {
   margin-bottom: 60px;
   position: absolute;
   bottom: 20px;
+  opacity: 0.7;
 }
 .site-nav a {
   color: white;

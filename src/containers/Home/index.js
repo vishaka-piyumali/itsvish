@@ -11,9 +11,10 @@ class Home extends Component {
 	render () {
 		return (
 			<div className="about-section">
-				<h1>Hey there!</h1>
+
+				<h1>Hello!</h1>
 				<p>
-					I am Vishaka, A Sydney based front end web developer.
+					I am Vishaka, A Sydney based web developer.
 				</p>
 				<p>
 					I am passionate about creating clean, unique, responsive, accessible and elegant web sites for better user experience.

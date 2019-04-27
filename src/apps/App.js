@@ -68,10 +68,10 @@ class App extends Component {
 			<div>
 				<main>
 					<Row>
-						<Column large={3}>
+						<Column large={3} small={12}>
 							<QuickLinks />
 						</Column>
-						<Column large={9}>
+						<Column large={9} small={12}>
 							<Switch>
 								<Route exact path='/' component={Home}/>
 								<Route path='/skills' component={Skills}/>

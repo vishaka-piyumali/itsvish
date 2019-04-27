@@ -6,7 +6,8 @@
     font-family: 'primary-header-family';
     text-align: left;
     padding-top: 40%;
-    border-top: 5px solid gold;
+    background-size: cover;
+    background-image: url('/assets/images/background.png');
 }
 .about-section {
     text-align: center;
@@ -18,6 +19,7 @@
     margin: 0 auto;
     margin-top: 200px;
     margin-bottom: 50px;
+
 }
 
 .about-section h1 {
