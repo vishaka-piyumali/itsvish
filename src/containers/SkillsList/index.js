@@ -12,10 +12,7 @@ class SkillsList extends Component {
 	renderSkillsSection () {
 		return (
 			<Row className="section-skills">
-				<Column className="show-for-large" medium={6}>
-					<img src={skillsBanner} alt="skills" />
-				</Column>
-				<Column mediumn={12} large={6}>
+				<Column mediumn={12} large={12}>
 					<ul className="skill-categories">
 						{this.props.skills.map((category) => {
 							return (

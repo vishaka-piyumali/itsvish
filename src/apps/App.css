@@ -78,6 +78,18 @@ hr {
   color: gold;
 }
 
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .site-nav.vertical {
+    flex-direction: row;
+    position: relative;
+    bottom: inherit;
+  }
+  main .quick-links {
+    height: initial;
+  }
+}
+
 main {
   overflow: scroll;
   min-height: calc(100vh - 200px);

@@ -9,6 +9,7 @@
     background-size: cover;
     background-image: url('/assets/images/background.png');
 }
+
 .about-section {
     text-align: center;
     font-size: 16px;
@@ -19,9 +20,22 @@
     margin: 0 auto;
     margin-top: 200px;
     margin-bottom: 50px;
-
+    opacity: 0;
+    transform: scale(0.5);
+    animation: scale-up 1s ease forwards;
 }
+@media screen and (max-width: 39.9375em) {
+    .about-section {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 20px;
+    }
 
+    main .quick-links {
+        height: initial;
+        padding: 0;
+    }
+}
 .about-section h1 {
     margin-top: 40px;
 }
@@ -46,12 +60,6 @@ h4 {
 hr {
     width: 80%;
     margin-left: 0;
-}
-
-.about-section {
-    opacity: 0;
-    transform: scale(0.5);
-    animation: scale-up 1s ease forwards;
 }
 
 @keyframes scale-up {

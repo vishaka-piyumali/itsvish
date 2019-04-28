@@ -16,7 +16,6 @@ import UICard from '../../components/UI/Card';
 class DemoList extends Component {
 
 	constructor (props) {
-
 		super(props);
 		this.props.fetchKudosForDemos();
 		this.showDemoDetails = this.showDemoDetails.bind(this);
@@ -30,15 +29,8 @@ class DemoList extends Component {
 
 		const data = { pageName: demo.id };
 
-		/* if (this.state.liked) {
-			return false;
-		} */
-
 		this.props.sendKudos(data.pageName)
 		.then(() => {
-			/* this.setState({
-				liked: true
-			}); */
 			window.localStorage.setItem(data.pageName, true);
 			this.props.fetchKudosForDemos();
 		});
@@ -71,7 +63,6 @@ class DemoList extends Component {
 								headerBadge={demo.heroTechImage}
 								headerBadgeText={demo.heroTechText}
 								thumbnail={demo.thumbnail}
-								footerStickyContent={demo.kudos + ' KUDOS'}
 								footerLinks={[
 									{
 										icon: 'fi-social-github icon small',
@@ -87,7 +78,6 @@ class DemoList extends Component {
 								}
 								active={demo.liked}
 							    secondaryContent={demo.description}
-								headerClickAction={this.sendKudos.bind(this, demo)}
 							/>
 						</Column>
 					</Row>

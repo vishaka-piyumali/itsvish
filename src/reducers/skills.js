@@ -2,7 +2,7 @@ export default function () {
 	return [
 		{
 			"title": "JavaScript Frameworks",
-			"skills": [ 'RactiveJs', 'ReactJs', 'BlazeJs' , 'BackboneJs', 'AngularJs']
+			"skills": [ 'RactiveJs', 'ReactNative', 'ReactJs', 'BlazeJs' , 'BackboneJs', 'AngularJs']
 		},
 		{
 			"title": "Native Web Deveopment",
@@ -18,7 +18,7 @@ export default function () {
 		},
 		{
 			"title": "Server Side Scripting",
-			"skills": ['Jsp', 'Freemarker', 'PHP', 'NodeJs', 'ExpressJs']
+			"skills": ['Jsp', 'Freemarker', 'PHP', 'NodeJs', 'ExpressJs', 'ServerSide Js']
 		},
 		{
 			"title": "Continuous Integration",

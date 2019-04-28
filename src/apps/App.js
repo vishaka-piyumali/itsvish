@@ -42,7 +42,7 @@ const SiteNav = props => (
 
 
 const SocialLinks = props => (
-	<ul className="menu social align-center">
+	<ul className="menu social align-center hide-for-small-only">
 		{SOCIALLINKS.map((social) => {
 			return (
 					<li key={social.link}>
@@ -56,7 +56,7 @@ const SocialLinks = props => (
 );
 
 const QuickLinks = props => (
-		<div class="quick-links">
+		<div className="quick-links">
 			<SiteNav />
 			<SocialLinks/>
 		</div>
