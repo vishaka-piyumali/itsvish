@@ -63,6 +63,7 @@ class DemoList extends Component {
 								headerBadge={demo.heroTechImage}
 								headerBadgeText={demo.heroTechText}
 								thumbnail={demo.thumbnail}
+								link={demo.link}
 								footerLinks={[
 									{
 										icon: 'fi-social-github icon small',
@@ -91,7 +92,7 @@ class DemoList extends Component {
 		}
 		else {
 			return (
-					<Row>
+					<Row className="collapse">
 						<Column>
 							<Row className="collapse medium-up-2 demo-list-container">
 								{Object.values(this.props.demos).map((demo) => {

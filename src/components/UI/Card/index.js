@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Row, Column } from 'react-foundation';
 
 import './index.css';
 
@@ -19,15 +20,20 @@ const CardHeader = props => (
 	</div>
 );
 
-const FlipContent = props => (
-	<div className="flip-container">
-		<div className="flipper">
-			<div className="front">
-				<img className="card-image" src={props.thumbnail} title={props.shortDesc} alt={props.shortDesc} />
-			</div>
-			<div className="back">
-				{props.secondaryContent}
-			</div>
+const CardBody = props => (
+	<div className="card-desc">
+		<div className="main-content">
+			<Row>
+				<Column mediumn={6} large={6}>
+					{props.secondaryContent}
+				</Column>
+				<Column mediumn={6} large={6}>
+					<img className="card-image" src={props.thumbnail} title={props.shortDesc} alt={props.shortDesc} />
+				</Column>
+			</Row>
+		</div>
+		<div className="support-content">
+			{props.content}
 		</div>
 	</div>
 );
@@ -65,13 +71,13 @@ export default class Card extends Component {
 					date={this.props.date}
 					active={this.props.active}
 					headerClickAction={this.props.headerClickAction} />
-				<FlipContent
-					thumbnail={this.props.thumbnail}
-					shortDesc={this.props.title}
-					secondaryContent={this.props.secondaryContent} />
-				<div className="card-desc">
-					<div>{this.props.description}</div>
-				</div>
+				<a href={this.props.link} title={this.props.label} alt={this.props.label} rel="noopener noreferrer" target="_blank">
+					<CardBody thumbnail={this.props.thumbnail}
+						shortDesc={this.props.title}
+						content={this.props.description}
+						secondaryContent={this.props.secondaryContent} >
+					</CardBody>
+				</a>
 				<CardFooter items={this.props.footerLinks} stickyContent={this.props.footerStickyContent} />
 			</div>
 		)}

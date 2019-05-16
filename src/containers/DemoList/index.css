@@ -2,9 +2,10 @@
     margin-top: 10px;
     height: 100vh;
     overflow: scroll;
+    padding: 0 20px;
 }
 .demo-item {
-    padding: 10px;
+    padding: 20px;
     overflow: hidden;
     border: 1px transparent;
 }
